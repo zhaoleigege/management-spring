@@ -1,0 +1,27 @@
+server:
+  port: 9094
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/muduo_cloud?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jooq:
+    sql-dialect: mysql_5_7
+
+  cache:
+    type: redis
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: muduo
+
+logging:
+    level:
+      org:
+        springframework:
+         data:
+          mongodb: debug
